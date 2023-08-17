@@ -75,7 +75,7 @@ describe('AdminComponent', () => {
     expect(component.newTeam).toEqual({ name: '', maximumBudget: 0 });
   }));
 
-  it('Week5_Day1_should add a new player on form submission', fakeAsync(() => {
+  fit('Week5_Day1_should add a new player on form submission', fakeAsync(() => {
     const initialPlayerCount = component.players.length;
     component.newPlayer = { name: 'New Player', age: 25 };
 
@@ -103,7 +103,7 @@ describe('AdminComponent', () => {
     expect(teamElement.textContent).toContain(component.teams[0].name);
   });
 
-  it('Week5_Day1_should display player list', () => {
+  fit('Week5_Day1_should display player list', () => {
     component.players = [
       { name: 'Player X', age: 22 },
       { name: 'Player Y', age: 28 },

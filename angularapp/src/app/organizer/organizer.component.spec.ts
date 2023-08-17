@@ -49,7 +49,7 @@ describe('OrganizerComponent', () => {
     expect(component.unsoldPlayers[0].category).toBe('Category A');
   });
 
-  it('Week5_Day2_should display unsold players', () => {
+  fit('Week5_Day2_should display unsold players', () => {
     component.unsoldPlayers = [
       { id: 1, name: 'Player A', age: 25, category: 'Category A' },
       { id: 2, name: 'Player B', age: 28, category: 'Category B' }
@@ -60,7 +60,7 @@ describe('OrganizerComponent', () => {
     expect(playerListItems.length).toBe(2);
   });
 
-  it('Week5_Day2_should display team list', () => {
+  fit('Week5_Day2_should display team list', () => {
     component.teams = [
       { id: 1, name: 'Team X', maximumBudget: 100000 },
       { id: 2, name: 'Team Y', maximumBudget: 150000 }
@@ -71,7 +71,7 @@ describe('OrganizerComponent', () => {
     expect(teamListItems.length).toBe(2);
   });
 
-  it('Week5_Day2_should fetch unsold players on initialization', () => {
+  fit('Week5_Day2_should fetch unsold players on initialization', () => {
     mockOrganizerService.getUnsoldPlayers.and.returnValue(of(mockUnsoldPlayers));
     fixture.detectChanges();
     expect(component.unsoldPlayers).toEqual(mockUnsoldPlayers);
